@@ -53,21 +53,33 @@ body {
   margin-bottom: 150px;
 }
 
-h1,
-h2 {
+.title {
+  font-weight: 600;
   font-size: $font-h1;
-  line-height: 1.2;
+  line-height: $lh-h1;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: $font-h1;
+  line-height: $lh-h1;
+  font-weight: 600;
+  color: $cod-gray;
+}
+
+h2 {
+  font-size: $font-h2;
+  line-height: $lh-h2;
   font-weight: 600;
   color: $cod-gray;
 }
 
 h3 {
   font-size: $font-h3;
-  line-height: 1.2;
+  line-height: $lh-h3;
   font-weight: 600;
   color: $cod-gray;
 }
-
 
 .btn {
   display: block;
@@ -107,11 +119,13 @@ h3 {
   line-height: $lh-text;
   border-radius: $btn-border-radius;
   transition: background-color 0.3s, color 0.3s;
-  :hover {
+
+  &:hover {
     background-color: $yellow-200;
     color: $yellow-300;
   }
-  :active {
+
+  &:active {
     background-color: $yellow-300;
     color: $white;
   }
@@ -134,5 +148,15 @@ h3 {
   &::placeholder {
     color: $gray-500;
   }
+}
 
+p,
+span {
+  font-size: $font-text;
+  line-height: $lh-text;
+  color: $cod-gray;
+}
+
+span {
+  font-size: $font-text;
 }
